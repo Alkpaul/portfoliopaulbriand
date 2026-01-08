@@ -358,13 +358,50 @@ p {
     animation: slideIn 0.8s var(--transition-smooth);
 }
 
+
 .visual-placeholder {
     width: 100%;
+    max-width: 400px;
+    /* On limite la taille pour pas que ça fasse immense sur grand écran */
     aspect-ratio: 1;
-    border-radius: 24px;
+    /* Garde le format carré */
+    border-radius: 40px;
+    /* Arrondi plus prononcé "Apple" (squircle) */
     overflow: hidden;
-    background: var(--bg-secondary);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    /* On enlève la couleur de fond grise qui fait "bug" */
+    background: transparent;
+    /* Ombre plus douce et plus colorée (proche du bleu Apple) pour l'intégration */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    /* Petite bordure interne subtile pour délimiter l'image proprement */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    /* Centre le bloc */
+    position: relative;
+}
+
+/* Ajout d'un effet de brillance par dessus l'image (très Apple) */
+.visual-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 40px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    /* C'est LA ligne magique : l'image remplit tout le cadre */
+    object-fit: cover;
+    /* Ajuste ceci si ta tête est coupée (top, center, bottom) */
+    object-position: center top;
+    transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Petit bonus : léger zoom au survol de la photo */
+.visual-placeholder:hover .hero-photo {
+    transform: scale(1.05);
 }
 
 .hero-video {
@@ -373,12 +410,7 @@ p {
     object-fit: cover;
 }
 
-.hero-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-}
+
 
 /* ===== SECTION EXPÉRIENCE ===== */
 .experience-section {
@@ -387,7 +419,7 @@ p {
 
 .experiences-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
 }
 
@@ -398,6 +430,31 @@ p {
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.3s var(--transition-smooth);
     animation: fadeInUp 0.6s var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experience-logo {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: all 0.3s var(--transition-smooth);
+}
+
+.experience-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.experience-card:hover .experience-logo {
+    background: rgba(0, 113, 227, 0.05);
 }
 
 .experience-card:hover {

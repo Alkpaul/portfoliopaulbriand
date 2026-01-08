@@ -45,9 +45,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const images = carousel.querySelectorAll('.carousel-image');
         const prevBtn = carousel.querySelector('.carousel-prev');
         const nextBtn = carousel.querySelector('.carousel-next');
-        const indicators = carousel.querySelectorAll('.indicator');
-
+        const indicatorsContainer = carousel.querySelector('.carousel-indicators');
+        
         let currentIndex = 0;
+
+        // Créer dynamiquement les indicateurs en fonction du nombre d'images
+        if (indicatorsContainer) {
+            indicatorsContainer.innerHTML = '';
+            images.forEach((_, index) => {
+                const indicator = document.createElement('span');
+                indicator.className = `indicator ${index === 0 ? 'active' : ''}`;
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    showImage(currentIndex);
+                });
+                indicatorsContainer.appendChild(indicator);
+            });
+        }
+
+        const indicators = carousel.querySelectorAll('.indicator');
 
         function showImage(index) {
             // Boucle
@@ -56,11 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             images.forEach((img, i) => {
                 img.classList.remove('active');
-                indicators[i].classList.remove('active');
+                if (indicators[i]) {
+                    indicators[i].classList.remove('active');
+                }
             });
 
             images[currentIndex].classList.add('active');
-            indicators[currentIndex].classList.add('active');
+            if (indicators[currentIndex]) {
+                indicators[currentIndex].classList.add('active');
+            }
         }
 
         if (prevBtn) {
@@ -76,19 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 showImage(currentIndex);
             });
         }
-
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentIndex = index;
-                showImage(currentIndex);
-            });
-        });
-
-        // Auto-play du carousel (optionnel - décommenter si tu veux)
-        // setInterval(() => {
-        //     currentIndex++;
-        //     showImage(currentIndex);
-        // }, 5000);
     });
 });
 
