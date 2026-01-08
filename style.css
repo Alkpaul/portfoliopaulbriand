@@ -404,6 +404,33 @@ p {
     transform: scale(1.05);
 }
 
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1.5rem;
+    background: #0071E3;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(0, 113, 227, 0.25);
+}
+
+.linkedin-btn:hover {
+    background: #0051B3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 113, 227, 0.35);
+}
+
+.linkedin-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
 .hero-video {
     width: 100%;
     height: 100%;
