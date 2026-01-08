@@ -426,9 +426,10 @@ p {
     box-shadow: 0 8px 25px rgba(0, 113, 227, 0.35);
 }
 
-.linkedin-btn svg {
-    width: 20px;
-    height: 20px;
+.linkedin-icon {
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
 
 .hero-video {
