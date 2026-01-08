@@ -4,67 +4,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Navigation Latérale -->
     <nav class="sidebar">
-        <div class="nav-links">
-            <a href="#intro" class="active">Intro</a>
-            <a href="#experience">Expérience Pro</a>
-            <a href="#international">International</a>
-            <a href="#projets">Projets Perso</a>
-            <a href="#scores">Scores & Épreuves</a>
-            <a href="#motivation">Motivations</a>
+        <div class="sidebar-top">
+            <div class="nav-links">
+                <a href="#intro" class="nav-link active" data-section="intro">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">Accueil</span>
+                </a>
+                <a href="#experience" class="nav-link" data-section="experience">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">Expérience</span>
+                </a>
+                <a href="#international" class="nav-link" data-section="international">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">International</span>
+                </a>
+                <a href="#projets" class="nav-link" data-section="projets">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">Projets</span>
+                </a>
+                <a href="#scores" class="nav-link" data-section="scores">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">Scores</span>
+                </a>
+                <a href="#motivation" class="nav-link" data-section="motivation">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">Motivations</span>
+                </a>
+            </div>
         </div>
-        <div class="secondary-nav">
-            <a href="tagemage.html" class="btn-tage">Prépa TAGE MAGE →</a>
+        <div class="sidebar-bottom">
+            <a href="tagemage.html" class="btn-tage">
+                <span>Prépa TAGE MAGE</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M9 2L14 7M14 7L9 12M14 7H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
     </nav>
 
-    <main>
+    <!-- Contenu Principal -->
+    <main class="content">
 
-        <section id="intro" class="snap-section">
+        <!-- Section Accueil -->
+        <section id="intro" class="snap-section intro-section">
             <div class="content-wrapper">
-                <h1>Bonjour, je suis [Ton Prénom].</h1>
-                <p class="subtitle">Une phrase d'accroche percutante.</p>
-                <div class="media-container">
-                    <video autoplay muted loop playsinline poster="poster.jpg">
-                        <source src="ton-video-presentation.mp4" type="video/mp4">
-                    </video>
+                <div class="intro-content">
+                    <h1 class="hero-title">Mon Portfolio <span class="highlight">Paul Briand</span>.</h1>
+                    <p class="hero-subtitle">Une phrase d'accroche percutante qui résume ton parcours.</p>
+                    <div class="cta-buttons">
+                        <a href="#experience" class="btn btn-primary">Découvrir mon parcours</a>
+                        <a href="tagemage.html" class="btn btn-secondary">Voir ma prépa TAGE MAGE</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-placeholder">
+                        <!-- Photo de profil -->
+                        <img src="moi/d3324fa9-9f9e-49dd-a6cf-26819878fb84.jpeg" alt="Paul Briand" class="hero-photo">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="snap-section">
+        <!-- Section Expérience Professionnelle -->
+        <section id="experience" class="snap-section experience-section">
             <div class="content-wrapper">
                 <h2>Expérience Professionnelle</h2>
+                <div class="experiences-grid">
+                    <!-- Les expériences vont ici -->
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3>Intitulé du poste</h3>
+                            <span class="date-badge">2023 - 2024</span>
+                        </div>
+                        <p class="company">Nom de l'entreprise</p>
+                        <p class="description">Description de l'expérience, tes responsabilités et accomplissements...</p>
+                        <div class="tags">
+                            <span class="tag">Compétence 1</span>
+                            <span class="tag">Compétence 2</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="international" class="snap-section">
+        <!-- Section International -->
+        <section id="international" class="snap-section international-section">
             <div class="content-wrapper">
-                <h2>International</h2>
+                <h2>Expérience Internationale</h2>
+                <div class="international-grid">
+                    <!-- Angleterre -->
+                    <div class="country-card">
+                        <div class="country-media">
+                            <div class="media-carousel" data-country="uk">
+                                <img src="images_angleterre/IMG_8516.HEIC" alt="Angleterre" class="carousel-image active">
+                                <img src="images_angleterre/IMG_8520.HEIC" alt="Angleterre" class="carousel-image">
+                                <img src="images_angleterre/IMG_8768.HEIC" alt="Angleterre" class="carousel-image">
+                                <img src="images_angleterre/IMG_8769.HEIC" alt="Angleterre" class="carousel-image">
+                                <img src="images_angleterre/IMG_9340.HEIC" alt="Angleterre" class="carousel-image">
+                                <div class="carousel-controls">
+                                    <button class="carousel-prev" aria-label="Image précédente">←</button>
+                                    <button class="carousel-next" aria-label="Image suivante">→</button>
+                                </div>
+                                <div class="carousel-indicators">
+                                    <span class="indicator active"></span>
+                                    <span class="indicator"></span>
+                                    <span class="indicator"></span>
+                                    <span class="indicator"></span>
+                                    <span class="indicator"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="country-info">
+                            <h3>Angleterre</h3>
+                            <p class="country-period">Année et contexte de l'expérience...</p>
+                            <p class="country-description">Décris ton expérience en Angleterre, ce que tu as appris, les points marquants...</p>
+                        </div>
+                    </div>
+
+                    <!-- Suède -->
+                    <div class="country-card">
+                        <div class="country-media">
+                            <div class="media-carousel" data-country="sweden">
+                                <img src="imagessuède/AYEM1970.JPG" alt="Suède" class="carousel-image active">
+                                <img src="imagessuède/IMG_2530.HEIC" alt="Suède" class="carousel-image">
+                                <img src="imagessuède/IMG_2541.HEIC" alt="Suède" class="carousel-image">
+                                <img src="imagessuède/IMG_2559.HEIC" alt="Suède" class="carousel-image">
+                                <img src="imagessuède/IMG_2562.HEIC" alt="Suède" class="carousel-image">
+                                <div class="carousel-controls">
+                                    <button class="carousel-prev" aria-label="Image précédente">←</button>
+                                    <button class="carousel-next" aria-label="Image suivante">→</button>
+                                </div>
+                                <div class="carousel-indicators">
+                                    <span class="indicator active"></span>
+                                    <span class="indicator"></span>
+                                    <span class="indicator"></span>
+                                    <span class="indicator"></span>
+                                    <span class="indicator"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="country-info">
+                            <h3>Suède</h3>
+                            <p class="country-period">Année et contexte de l'expérience...</p>
+                            <p class="country-description">Décris ton expérience en Suède, ce que tu as appris, les points marquants...</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="projets" class="snap-section">
+        <!-- Section Projets Personnels -->
+        <section id="projets" class="snap-section projects-section">
             <div class="content-wrapper">
                 <h2>Projets Personnels</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-media">
+                            <video autoplay muted loop playsinline class="project-video">
+                                <source src="project-video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-info">
+                            <h3>Nom du projet</h3>
+                            <p class="project-description">Description courte du projet et tes apprentissages...</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Tech 1</span>
+                                <span class="tech-tag">Tech 2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="scores" class="snap-section">
+        <!-- Section Scores -->
+        <section id="scores" class="snap-section scores-section">
             <div class="content-wrapper">
-                <h2>Mes Scores</h2>
+                <h2>Mes Scores & Épreuves</h2>
+                <div class="scores-grid">
+                    <div class="score-card">
+                        <h3>Nom de l'épreuve</h3>
+                        <div class="score-display">
+                            <div class="score-number">XX/YY</div>
+                            <div class="score-details">
+                                <p>Contexte, date, efforts fournis...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="motivation" class="snap-section">
+        <!-- Section Motivations -->
+        <section id="motivation" class="snap-section motivation-section">
             <div class="content-wrapper">
-                <h2>Motivations</h2>
+                <h2>Mes Motivations</h2>
+                <div class="motivation-content">
+                    <p class="motivation-intro">Détaille tes motivations professionnelles, personnelles et académiques de manière plus profonde et personnelle qu'une lettre de motivation classique...</p>
+                    <div class="motivation-points">
+                        <!-- Points de motivation à développer -->
+                    </div>
+                </div>
             </div>
         </section>
 

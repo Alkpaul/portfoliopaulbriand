@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prépa TAGE MAGE</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .breadcrumb {
+            padding: 2rem 0;
+            margin-left: var(--sidebar-width);
+            padding-left: 4rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .breadcrumb a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .tage-container {
+            margin-left: var(--sidebar-width);
+            padding: 4rem 4rem;
+            max-width: 1200px;
+        }
+
+        .tage-header {
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.8s var(--transition-smooth);
+        }
+
+        .tage-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tage-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .tage-sections {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .tage-section-block {
+            padding: 2.5rem;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            animation: fadeInUp 0.8s var(--transition-smooth);
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .tage-section-block:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0, 113, 227, 0.1);
+        }
+
+        .tage-section-block h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .tage-section-block h3 {
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem 0;
+            color: var(--accent-color);
+        }
+
+        .tage-section-block h3:first-child {
+            margin-top: 0;
+        }
+
+        .tage-section-block p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .tage-section-block ul, .tage-section-block ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tage-section-block li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .resource-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .resource-item {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 113, 227, 0.2);
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .resource-item:hover {
+            background: rgba(0, 113, 227, 0.05);
+            border-color: var(--accent-color);
+        }
+
+        .resource-item h4 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            margin-top: 1rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-alt));
+            border-radius: 4px;
+            transition: width 0.6s var(--transition-smooth);
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s var(--transition-smooth);
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            transform: translateX(-4px);
+        }
+
+        .back-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .tage-container {
+                padding: 2rem 1.5rem;
+                margin-left: 70px;
+            }
+
+            .breadcrumb {
+                padding-left: 2rem;
+                margin-left: 70px;
+            }
+
+            .tage-header h1 {
+                font-size: 2rem;
+            }
+
+            .tage-section-block {
+                padding: 1.5rem;
+            }
+
+            .tage-section-block h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Latérale (même que sur la page principale) -->
+    <nav class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">
+                <span class="logo-icon">→</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-section="accueil" title="Retour au portfolio">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">Portfolio</span>
+                </a>
+            </div>
+        </div>
+        <div class="sidebar-bottom">
+            <a href="index.html" class="btn-tage">
+                <span>← Retour</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M7 14L2 9M2 9L7 4M2 9H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <a href="index.html">Portfolio</a> / <span style="color: var(--text-secondary);">Prépa TAGE MAGE</span>
+    </div>
+
+    <div class="tage-container">
+
+        <div class="tage-header">
+            <h1>Ma Préparation TAGE MAGE</h1>
+            <p>Suivi de mon apprentissage, ressources utilisées et réflexions personnelles</p>
+        </div>
+
+        <div class="tage-sections">
+
+            <!-- Section Résumé de ma préparation -->
+            <div class="tage-section-block">
+                <h2>Mon Parcours de Préparation</h2>
+                <p>Décris ton approche globale de la préparation au TAGE MAGE. Comment as-tu commencé, quelle a été ta stratégie globale, tes objectifs...</p>
+                
+                <h3>Phase 1 : Diagnostic Initial</h3>
+                <p>Raconte comment tu as commencé, tes premiers scores, tes forces et faiblesses identifiées...</p>
+
+                <h3>Phase 2 : Apprentissage et Entraînement</h3>
+                <p>Détaille ta méthode d'étude, le temps consacré, les ressources utilisées...</p>
+
+                <h3>Phase 3 : Perfectionnement</h3>
+                <p>Comment tu as amélioré tes scores, tes techniques développées, ta progression...</p>
+            </div>
+
+            <!-- Section Cours et Notes -->
+            <div class="tage-section-block">
+                <h2>📚 Cours & Notes Personnelles</h2>
+                <p>Ici tu peux lister tes notes, tes cours rédigés et tes fiches de révision.</p>
+                
+                <h3>Maîtrise de la Langue Française</h3>
+                <ul>
+                    <li>Liens ou descriptions de tes notes sur la grammaire, l'orthographe...</li>
+                    <li>Tes propres fiches de révision</li>
+                    <li>Points difficiles surmontés</li>
+                </ul>
+
+                <h3>Compréhension & Expression</h3>
+                <ul>
+                    <li>Notes sur la lecture critique</li>
+                    <li>Techniques de compréhension rapide</li>
+                    <li>Exercices pratiqués</li>
+                </ul>
+
+                <h3>Raisonnement & Logique</h3>
+                <ul>
+                    <li>Méthodes pour la logique</li>
+                    <li>Exercices d'entraînement</li>
+                    <li>Pièges courants à éviter</li>
+                </ul>
+
+                <h3>Calcul & Raisonnement Numérique</h3>
+                <ul>
+                    <li>Fiches de calcul mental</li>
+                    <li>Techniques rapides</li>
+                    <li>Erreurs courantes</li>
+                </ul>
+            </div>
+
+            <!-- Section Livres & Ressources -->
+            <div class="tage-section-block">
+                <h2>📖 Livres & Ressources Recommandés</h2>
+                <p>Les ressources qui t'ont aidé à progresser et que tu conseillerais à d'autres.</p>
+
+                <h3>Livres de Préparation</h3>
+                <div class="resource-list">
+                    <div class="resource-item">
+                        <h4>Titre du livre</h4>
+                        <p>Auteur | Édition</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.85rem;">Pourquoi ce livre t'a été utile...</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Plateformes & Tests en Ligne</h3>
+                <div class="resource-list">
+                    <div class="resource-item">
+                        <h4>Nom de la ressource</h4>
+                        <p>Type d'outil | Site web</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.85rem;">Ce que tu as apprécié et comment l'a utilisé...</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Autres Ressources Utiles</h3>
+                <ul>
+                    <li>Ressources gratuites trouvées</li>
+                    <li>Communautés ou forums utiles</li>
+                    <li>Mentors ou tuteurs</li>
+                    <li>Vidéos ou podcasts instructifs</li>
+                </ul>
+            </div>
+
+            <!-- Section Expérience & Conseils -->
+            <div class="tage-section-block">
+                <h2>💡 Mon Expérience & Mes Conseils</h2>
+                <p>Partage tes apprentissages, tes erreurs, et ce que tu conseillerais aux futurs candidats.</p>
+
+                <h3>Leçons Apprises</h3>
+                <ul>
+                    <li>Les erreurs que tu ne referais pas</li>
+                    <li>Ce qui a vraiment marché pour toi</li>
+                    <li>Comment tu as surmonté les blocages</li>
+                    <li>Gestion du stress et de la motivation</li>
+                </ul>
+
+                <h3>Stratégies de Test</h3>
+                <ul>
+                    <li>Ta méthode de gestion du temps</li>
+                    <li>Ordre des sections recommandé</li>
+                    <li>Comment tu abordes les questions difficiles</li>
+                    <li>Vérification et relecture</li>
+                </ul>
+
+                <h3>Conseils pour les Futurs Candidats</h3>
+                <ul>
+                    <li>Ne pas paniquer au premier diagnostic</li>
+                    <li>Sois régulier dans ta préparation plutôt qu'intensif</li>
+                    <li>Comprendre les concepts plutôt que mémoriser</li>
+                    <li>S'entraîner dans les conditions du test</li>
+                    <li>Prendre soin de ta santé mentale pendant la préparation</li>
+                </ul>
+
+                <h3>Résultats & Objectifs</h3>
+                <p>Raconte tes scores progressifs, tes objectifs atteints ou en cours de réalisation...</p>
+                <div class="progress-bar" style="margin-top: 1rem;">
+                    <div class="progress-fill" style="width: 75%;"></div>
+                </div>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Exemple: 75% d'amélioration depuis le départ</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Animation simple au load
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.tage-section-block').forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.animation = `fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards`;
+                }, index * 100);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
