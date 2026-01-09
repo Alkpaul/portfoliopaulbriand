@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet Minecraft - Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <!-- Navigation Latérale -->
+    <nav class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">🎮</div>
+            <div class="nav-links">
+                <a href="#intro-minecraft" class="nav-link active" data-section="intro-minecraft">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">Accueil</span>
+                </a>
+                <a href="#story" class="nav-link" data-section="story">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">Histoire</span>
+                </a>
+                <a href="#gallery" class="nav-link" data-section="gallery">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">Galerie</span>
+                </a>
+            </div>
+        </div>
+        <div class="sidebar-bottom">
+            <a href="index.html" class="btn-tage">
+                <span>Retour</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M9 2L14 7M14 7L9 12M14 7H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenu Principal -->
+    <main class="content">
+        <!-- Section Intro Minecraft -->
+        <section id="intro-minecraft" class="snap-section intro-section">
+            <div class="content-wrapper">
+                <div class="intro-content">
+                    <h1 class="hero-title">Projet <span class="highlight">Minecraft</span> Collectif</h1>
+                    <p class="hero-subtitle">Une aventure architecturale épique menée par une vingtaine de passionnés. Nous avons construit un monde gigantesque du zéro, une réalisation à grande échelle mêlant créativité, organisation et collaboration.</p>
+                    <p class="hero-subtitle">Un projet qui m'a tenu à coeur, ayant démontré notre capacité à travailler en équipe, à planifier des objectifs ambitieux et à réaliser une vision commune sur plusieurs mois.</p>
+                    <div class="cta-buttons">
+                        <a href="#gallery" class="btn btn-primary">Découvrir la galerie</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-placeholder" style="background: linear-gradient(135deg, #4A4A4A, #2D2D2D);">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 6rem;">⛏️</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Histoire -->
+        <section id="story" class="snap-section story-section">
+            <div class="content-wrapper">
+                <h2>L'Histoire du Projet</h2>
+                <div class="story-content">
+                    <p class="story-text">
+                        Démarré durant le confinement, ce projet Minecraft représente bien plus qu'une simple construction dans un jeu vidéo. C'est le fruit d'une collaboration intense entre une vingtaine de personnes passionnées par l'architecture, la créativité et le travail d'équipe.
+                    </p>
+                    <p class="story-text">
+                        Partis d'une toile blanche, nous avons envisagé, conçu et réalisé un monde complet dans une ambiance médiévale. Du majestueux château au cœur de la cité, en passant par les remparts défensifs, la cathédrale imposante, et les quartiers résidentiels, chaque structure a été soigneusement planifiée et fait main.
+                    </p>
+                    <p class="story-text">
+                        Ce qui rend ce projet particulièrement remarquable à mes yeux est non seulement la synchronisation requise entre les différents contributeurs : gestion des ressources, coordination architecturale, respect des styles définis, et résolution des conflits créatifs. Mais aussi le temps qu'il nous aura fallu pour en arriver au bout. C'était un véritable défi logistique réalisé en 3 ans.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Zone galerie -->
+        <section id="gallery" class="snap-section gallery-section">
+            <div class="content-wrapper">
+                <h2>Galerie du Projet</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem;">Découvrez les créations architecturales de notre communauté</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft1.png" alt="Champ">
+                        <span class="box-name">Champ</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft2.png" alt="Pont de la forêt">
+                        <span class="box-name">Pont de la forêt</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft3.png" alt="Champ">
+                        <span class="box-name">Champ</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft4.png" alt="Rempart de la ville">
+                        <span class="box-name">Rempart de la ville</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft5.png" alt="Porte sud de la ville">
+                        <span class="box-name">Porte sud de la ville</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft6.png" alt="Cathédrale vue depuis les remparts">
+                        <span class="box-name">Cathédrale vue depuis les remparts</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft7.png" alt="Place du marché">
+                        <span class="box-name">Place du marché</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft8.png" alt="Placa mayor">
+                        <span class="box-name">Placa mayor</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft9.png" alt="Université">
+                        <span class="box-name">Université</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft10.png" alt="Transept est de la Cathédrale">
+                        <span class="box-name">Transept est de la Cathédrale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft11.png" alt="Sainte chapelle">
+                        <span class="box-name">Sainte chapelle</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft12.png" alt="Sainte chapelle">
+                        <span class="box-name">Sainte chapelle</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft13.png" alt="Sainte chapelle">
+                        <span class="box-name">Sainte chapelle</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft14.png" alt="Placa mayor de nuit">
+                        <span class="box-name">Placa mayor de nuit</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft15.png" alt="Sénat vue depuis le port">
+                        <span class="box-name">Sénat vue depuis le port</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft16.png" alt="Basilique saint André">
+                        <span class="box-name">Basilique saint André</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft17.png" alt="Place de la châtedrale">
+                        <span class="box-name">Place de la châtedrale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft18.png" alt="Place du marché">
+                        <span class="box-name">Place du marché</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft19.png" alt="Grand orgue de la châtedrale">
+                        <span class="box-name">Grand orgue de la châtedrale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft20.png" alt="Cœur de la châtedrale">
+                        <span class="box-name">Cœur de la châtedrale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft21.png" alt="Grande bibliothèque royale">
+                        <span class="box-name">Grande bibliothèque royale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft22.png" alt="Grande bibliothèque royale">
+                        <span class="box-name">Grande bibliothèque royale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft23.png" alt="Grande bibliothèque royale">
+                        <span class="box-name">Grande bibliothèque royale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft24.png" alt="Grande bibliothèque royale">
+                        <span class="box-name">Grande bibliothèque royale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft25.png" alt="Grande bibliothèque royale">
+                        <span class="box-name">Grande bibliothèque royale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft26.png" alt="Grande bibliothèque royale">
+                        <span class="box-name">Grande bibliothèque royale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft27.png" alt="Grande bibliothèque royale">
+                        <span class="box-name">Grande bibliothèque royale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft28.png" alt="Grande bibliothèque royale">
+                        <span class="box-name">Grande bibliothèque royale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft29.png" alt="Grande bibliothèque royale">
+                        <span class="box-name">Grande bibliothèque royale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft30.png" alt="Grande bibliothèque royale">
+                        <span class="box-name">Grande bibliothèque royale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft31.png" alt="Placa mayor">
+                        <span class="box-name">Placa mayor</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft32.png" alt="Place de la civilisation">
+                        <span class="box-name">Place de la civilisation</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft41.png" alt="Titanic">
+                        <span class="box-name">Titanic</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft34.png" alt="Marécage">
+                        <span class="box-name">Marécage</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft35.png" alt="Muraille est de la ville">
+                        <span class="box-name">Muraille est de la ville</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft36.png" alt="Port militaire">
+                        <span class="box-name">Port militaire</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft37.png" alt="Cathédrale">
+                        <span class="box-name">Cathédrale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft38.png" alt="Cathédrale">
+                        <span class="box-name">Cathédrale</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft39.png" alt="Porte sud">
+                        <span class="box-name">Porte sud</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images_minecraft/minecraft40.png" alt="Archive de la Cathédrale">
+                        <span class="box-name">Archive de la Cathédrale</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Mode plein écran -->
+    <div class="fullscreen" id="fullscreen">
+        <span class="close" id="close">×</span>
+        <span class="arrow left-arrow" id="leftArrow">‹</span>
+        <div class="fullscreen-content">
+            <img id="fullscreenImg" src="" alt="Fullscreen Image">
+            <span class="highlight-text" id="imageName"></span>
+        </div>
+        <span class="arrow right-arrow" id="rightArrow">›</span>
+    </div>
+
+    <footer>
+        <p>© 2025 Projet Minecraft Collectif. Un projet d'équipe mémorable créé par nos soins. Retour à mon <a href="index.html" style="color: var(--accent-color); font-weight: 600;">portfolio</a>.</p>
+    </footer>
+
+    <script>
+        // ===== GESTION DE LA NAVIGATION ACTIVE =====
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '0px 0px -50% 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('data-section') === id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
+
+            // Navigation au clic
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = link.getAttribute('href');
+                    const element = document.querySelector(target);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+
+        // ===== GESTION DE LA GALERIE ET FULLSCREEN =====
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+        const fullscreen = document.getElementById('fullscreen');
+        const fullscreenImg = document.getElementById('fullscreenImg');
+        const imageName = document.getElementById('imageName');
+        const closeBtn = document.getElementById('close');
+        const leftArrow = document.getElementById('leftArrow');
+        const rightArrow = document.getElementById('rightArrow');
+        let currentIndex = 0;
+
+        galleryItems.forEach((img, index) => {
+            img.parentElement.addEventListener('click', () => {
+                currentIndex = index;
+                fullscreenImg.src = img.src;
+                imageName.textContent = img.parentElement.querySelector('.box-name').textContent;
+                fullscreen.classList.add('active');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            fullscreen.classList.remove('active');
+        });
+
+        leftArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            fullscreenImg.src = galleryItems[currentIndex].src;
+            imageName.textContent = galleryItems[currentIndex].parentElement.querySelector('.box-name').textContent;
+        });
+
+        rightArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            fullscreenImg.src = galleryItems[currentIndex].src;
+            imageName.textContent = galleryItems[currentIndex].parentElement.querySelector('.box-name').textContent;
+        });
+
+        // Clavier
+        document.addEventListener('keydown', (e) => {
+            if (fullscreen.classList.contains('active')) {
+                if (e.key === 'ArrowLeft') {
+                    leftArrow.click();
+                } else if (e.key === 'ArrowRight') {
+                    rightArrow.click();
+                } else if (e.key === 'Escape') {
+                    closeBtn.click();
+                }
+            }
+        });
+
+        // Clic en dehors de l'image
+        fullscreen.addEventListener('click', (e) => {
+            if (e.target === fullscreen) {
+                closeBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>

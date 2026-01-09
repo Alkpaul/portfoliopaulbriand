@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ===== GESTION DES CAROUSELS D'IMAGES =====
 document.addEventListener('DOMContentLoaded', () => {
-    const carousels = document.querySelectorAll('.media-carousel');
+    const carousels = document.querySelectorAll('.media-carousel, .minecraft-carousel');
 
     carousels.forEach(carousel => {
         const images = carousel.querySelectorAll('.carousel-image');
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Observer les cartes et éléments
-    document.querySelectorAll('.experience-card, .project-card, .country-card, .score-card').forEach(el => {
+    document.querySelectorAll('.experience-card, .project-card, .country-card, .score-card, .gallery-item, .highlight-card').forEach(el => {
         observer.observe(el);
     });
 });
